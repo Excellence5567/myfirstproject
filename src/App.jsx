@@ -1,15 +1,16 @@
 import "./App.css";
 import { characters } from "./MarvelData";
+import { dcCharacters } from "./DC_Data";
 
-function App() {
+function App() {     
   return (
     <div className="mainBody">
       <div className="topHeader">
-        <h1 className="header">MARVELO</h1>
-        <input placeholder="Search a Marvel Character" className="topInput" />
+        <h1 className="header">DC</h1>
+        <input placeholder="Search a DC Character" className="topInput" />
       </div>
       <div className="cardBody">
-        {characters.map((data, index) => (
+        { dcCharacters.map((data, index) => (
           <div key={index} className="card">
             <div className="main">
               <img className="avatarImage" src={data.img1} alt={data.alias} />
